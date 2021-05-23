@@ -1,0 +1,172 @@
+ *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color:#000000;
+}
+
+
+.container { 
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo {
+    height: 50px;
+    width: 50px;
+    cursor:pointer;
+}
+header{
+    height: 80px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 50px 0px 100px;
+}
+.nav_link{
+    display: flex;
+    list-style: none;
+}
+.nav_link li {
+    margin: 0 30px;
+}
+.nav_link li a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: all 0.4s ease;
+}
+.nav_link li a hover,
+.nav_link li a.active{
+    color: blue;
+}
+header .menu_btn i{
+color: white;
+font-size: 20px;
+cursor: pointer;
+display: none;
+}
+#click {
+    display: none;
+}
+
+.hero {
+    min-height: 80vh;
+    width: 100%;
+    padding-top: 50px;
+    justify-content: center;
+    display: flex;
+    background-color:#171717;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.hero .hero-info{
+    width: 100%;
+    text-align: center;
+}
+.hero .hero-info .hero-info-heading {
+    font-weight: 500;
+    font-size: 3rem;
+    color: whitesmoke;
+}
+.hero .hero-info .hero-info-subheading {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    color: whitesmoke;
+}
+.hero .hero-img {
+    height: auto;
+    width: 50%;
+}
+.hero .hero-img img {
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+@media(max-width: 900px){
+    header .menu_btn i {
+        display: block;
+    }
+    #click :checked ~ .menu_btn i::before{
+       content: "\f00d";
+    }
+    .nav_link{
+       position: fixed;
+       top: 80px;
+       left: -100%;
+       background: #111111;
+       height: 100vh;
+       width: 100%;
+       display: block;
+       text-align: center;
+       transition: all 0.4s ease;
+    }
+    #click:checked ~ .nav_link {
+        left: 0%;
+    }
+    .nav_link li {
+        margin: 40px 0;
+      }
+      .nav_link li a {
+        font-size: 20px;
+        display: block;
+      }
+      .nav_link li a:hover,
+      .nav_link li a.active {
+        color: blue;
+      }
+      .hero .hero-info .hero-info-heading {
+        font-size: 3rem;
+      }
+      .hero .hero-info .hero-info-subheading {
+        letter-spacing: 0.8rem;
+      }
+}
+
+.about {
+    min-height: 100vh;
+    width: 100%;
+    background-image:  linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),url(img/photo-1568209865332-a15790aed756.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    color: #ffffff;
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+.about-details {
+    padding: 50px 100px;
+}
+.about-details h1{
+    font-size: 50px;
+    font-family: 800;
+    text-transform: uppercase;
+}
+.about-details img{
+    height: 200px;
+    width: 200px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    margin-top: 60px;
+}
+.about-details p{
+    font-size: 20px;
+    margin-top: 30px;
+}
